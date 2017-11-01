@@ -2,13 +2,12 @@ from __future__ import unicode_literals
 
 import decimal
 
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
 
 import stripe
-
-from jsonfield.fields import JSONField
 
 from .conf import settings
 from .managers import ChargeManager, CustomerManager

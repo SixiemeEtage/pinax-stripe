@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 from decimal import Decimal
+import django.contrib.postgres.fields.jsonb
 import django.utils.timezone
-import jsonfield.fields
 from django.conf import settings
 
 
@@ -118,8 +118,8 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
                 ('kind', models.CharField(max_length=250)),
                 ('livemode', models.BooleanField(default=False)),
-                ('webhook_message', jsonfield.fields.JSONField()),
-                ('validated_message', jsonfield.fields.JSONField(null=True)),
+                ('webhook_message', django.contrib.postgres.fields.jsonb.JSONField()),
+                ('validated_message', django.contrib.postgres.fields.jsonb.JSONField(null=True)),
                 ('valid', models.NullBooleanField()),
                 ('processed', models.BooleanField(default=False)),
                 ('request', models.CharField(blank=True, max_length=100)),
