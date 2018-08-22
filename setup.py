@@ -82,8 +82,8 @@ setup(
         "Framework :: Django",
     ],
     install_requires=[
-        "django-appconf>=1.0.1",
-        "stripe>=1.7.9",
+        "django-appconf==1.0.2",
+        "stripe==1.84.2",
         "django>=1.7",
         "pytz",
         "six",
